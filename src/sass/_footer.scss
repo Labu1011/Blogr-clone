@@ -1,0 +1,19 @@
+.footer {
+  background-color: $very-dark-black-blue;
+  border-top-right-radius: 50px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    border-top-right-radius: 100px;
+  }
+}
+
+.footer a {
+  display: block;
+  margin: 3px 0;
+}
+
+.footer a:hover {
+  color: $light-red;
+}

@@ -1,0 +1,41 @@
+.sec3 {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  background-image: url(../images/bg-pattern-circles.svg),
+    linear-gradient(to right, $very-dark-gray-blue, $very-dark-desaturated-blue);
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: 0% 80%;
+}
+
+.sec3-con {
+  max-width: 1200px;
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  .sec3 {
+    max-height: 400px;
+    background-position: -40% 90%;
+  }
+  .sec3-con {
+    max-width: 1200px;
+    max-height: 260px;
+  }
+  .phone {
+    display: block;
+    height: 550px !important;
+    transform: translateY(10px);
+  }
+}
+.phone {
+  display: block;
+  height: 400px;
+  margin-top: -200px;
+}
+.sec3 p {
+  letter-spacing: 0.3px;
+  line-height: 20px;
+}

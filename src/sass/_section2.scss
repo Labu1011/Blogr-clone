@@ -1,0 +1,23 @@
+.section2 {
+  font-family: $font-overpass;
+}
+
+@media (min-width: 1024px) {
+  .sec2-con {
+    height: 450px;
+  }
+}
+
+.section2 h1,
+p {
+  color: $very-dark-blue;
+}
+
+.section2 p {
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+.sec2-svg {
+  z-index: -1;
+  transform: translate(220px, -240px);
+}

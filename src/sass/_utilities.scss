@@ -1,0 +1,49 @@
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  font-size: 16px;
+  width: 120px;
+  color: $light-red-grad;
+  padding: 10px 5px;
+  border-radius: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: $very-light-red;
+  color: $white;
+}
+
+.btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid $white;
+  font-size: 16px;
+  width: 120px;
+  color: $white;
+  padding: 5px 15px;
+  border-radius: 30px;
+  transition: all 0.2s ease-in;
+}
+
+.btn-outline:hover {
+  background: $white;
+  color: $light-red-grad;
+}
+
+@media (min-width: 768px) {
+  .btn-primary {
+    font-size: 16px;
+    width: 130px;
+    padding: 10px 15px;
+  }
+  .btn-outline {
+    font-size: 16px;
+    width: 130px;
+    padding: 10px 15px;
+  }
+}
