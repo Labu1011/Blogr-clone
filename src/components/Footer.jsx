@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className=' py-16 mt-20 footer'>
+    <div className=' py-16 footer'>
       <div className='w-2/3 mx-auto grid grid-cols-1 md:grid-cols-4 text-center md:text-left'>
         <div>
           <svg
