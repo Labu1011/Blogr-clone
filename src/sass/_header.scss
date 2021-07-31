@@ -1,0 +1,27 @@
+.nav-modal {
+  width: 90%;
+  background: rgb(255, 249, 241);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+  animation: slide-in 0.2s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.show {
+  display: block;
+  pointer-events: auto;
+}

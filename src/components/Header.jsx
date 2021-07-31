@@ -1,7 +1,14 @@
-import React from 'react'
-import { FaChevronDown, FaBars } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaChevronDown, FaTimes } from 'react-icons/fa'
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const modalHandler = () => {
+    const modal = document.querySelector('.nav-modal')
+    modal.classList.toggle('show')
+  }
+
   return (
     <div className='py-8 md:py-10 w-full'>
       <div className='header-con mx-auto flex justify-between items-center'>
@@ -47,12 +54,76 @@ const Header = () => {
             <button className='btn-primary font-bold'>Sign up</button>
           </div>
         </div>
-        <div className='block pointer-events-auto lg:hidden lg:pointer-events-none mr-6'>
-          <svg width='32' height='18' xmlns='http://www.w3.org/2000/svg'>
-            <g fill='#FFF' fill-rule='evenodd'>
-              <path d='M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z' />
-            </g>
-          </svg>
+        {/* hamburger icon or close icon*/}
+
+        {isMenuOpen ? (
+          <FaTimes
+            className='text-2xl text-white pointer-events-auto cursor-pointer lg:hidden lg:pointer-events-none mr-6'
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen)
+              modalHandler()
+            }}
+          />
+        ) : (
+          <div className='block pointer-events-auto cursor-pointer lg:hidden lg:pointer-events-none mr-6'>
+            <svg
+              width='32'
+              height='18'
+              xmlns='http://www.w3.org/2000/svg'
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen)
+                modalHandler()
+              }}
+            >
+              <g fill='#FFF' fill-rule='evenodd'>
+                <path d='M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z' />
+              </g>
+            </svg>
+          </div>
+        )}
+      </div>
+
+      <div className='nav-modal h-80 p-6 rounded-2xl shadow-lg mt-28 z-50 lg:hidden'>
+        <div className='flex flex-col items-center'>
+          <div>
+            <a
+              href='#'
+              className='my-2 text-lg text-gray-700 flex items-center'
+            >
+              Product{' '}
+              <span className='ml-1'>
+                <FaChevronDown className='text-xs' />
+              </span>
+            </a>
+          </div>
+          <div>
+            <a
+              href='#'
+              className='my-2 text-lg text-gray-700 flex items-center'
+            >
+              Company
+              <span className='ml-1'>
+                <FaChevronDown className='text-xs' />
+              </span>
+            </a>
+          </div>
+          <div>
+            <a
+              href='#'
+              className='my-2 text-lg text-gray-700 flex items-center'
+            >
+              Connect
+              <span className='ml-1'>
+                <FaChevronDown className='text-xs' />
+              </span>
+            </a>
+          </div>
+          <div className='flex flex-col items-center my-2'>
+            <button className='text-md text-gray-600 hover:text-gray-200 font-bold mb-3'>
+              Login
+            </button>
+            <button className='btn-primary-mobile font-bold'>Sign up</button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,16 +1,17 @@
 import React from 'react'
 import LaptopSvgDesk from './LaptopSvgDesk'
-import LaptopSvgMobile from './LaptopSvgMobile'
+import LaptopMobile from '../images/Laptop-mobile.jpg'
+
 const SectionFour = () => {
   return (
-    <div className='w-full flex py-16 flex-col items-center lg:flex-row lg:items-center'>
+    <div className='w-full flex py-8 flex-col items-center lg:flex-row lg:items-center'>
       <div className='w-1/2 hidden lg:block lg:pointer-events-auto pointer-events-none'>
         <LaptopSvgDesk />
       </div>
       <div className='block lg:hidden lg:pointer-events-none mb-6'>
-        <LaptopSvgMobile />
+        <img src={LaptopMobile} alt='Laptop illustration for mobile device' />
       </div>
-      <div className='md:w-full h-auto px-4 lg:pl-8 text-center lg:text-left order-2 lg:order-1 mb-20'>
+      <div className='md:w-full h-auto px-4 lg:pl-8 text-center lg:text-left order-2 lg:order-1 lg:mb-20 mb-4'>
         <h1 className='text-xl md:text-2xl font-semibold'>
           Free, open, simple
         </h1>
